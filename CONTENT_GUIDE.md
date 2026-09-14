@@ -150,16 +150,15 @@ que quieras usar otro de los cuatro disponibles).
 **Archivo:** `src/data/relationship.ts`
 **Arreglo:** `kittyHunt.memories`
 
-Cada recuerdo tiene 5 campos: `id` (no lo cambies, define el orden del 1 al
-7), `title`, `date`, `message` y `photo` (+ `photoAlt`, la descripción de la
-foto para accesibilidad).
+Cada recuerdo tiene 4 campos: `id` (no lo cambies, define el orden del 1 al
+7), `title`, `message` y `photo` (+ `photoAlt`, la descripción de la foto
+para accesibilidad). El nivel no muestra fechas, solo título y mensaje.
 
 Antes:
 ```ts
 {
   id: 3,
   title: "[TÍTULO DEL RECUERDO 3]",
-  date: "[FECHA]",
   message: "Uno de mis días favoritos contigo.",
   photo: "/memories/photo03.jpg",
   photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 3]",
@@ -171,7 +170,6 @@ Después (ejemplo):
 {
   id: 3,
   title: "Nuestra primera cita",
-  date: "20 de marzo de 2025",
   message: "Uno de mis días favoritos contigo. No dejé de sonreír en todo el camino a casa.",
   photo: "/memories/photo03.jpg",
   photoAlt: "Los dos sonriendo frente al lago",

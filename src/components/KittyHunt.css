@@ -273,13 +273,6 @@
 
 .memory-title {
   font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-}
-
-.memory-date {
-  font-family: var(--font-script);
-  font-style: italic;
-  color: var(--color-ink-soft);
   margin-bottom: 1rem;
 }
 

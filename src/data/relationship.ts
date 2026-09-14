@@ -7,7 +7,7 @@
  * React contiene texto "quemado" en el código: todos leen desde aquí.
  *
  * Guía paso a paso de cada campo: ver CONTENT_GUIDE.md en la raíz del
- * proyecto (carpeta anniversary/).
+ * proyecto.
  *
  * Convención de placeholders: cualquier texto entre corchetes, por ejemplo
  * "[NOMBRE]" o "[FECHA]", es un marcador de posición que debes reemplazar
@@ -20,8 +20,6 @@ export interface KittyMemory {
   id: number;
   /** Título corto del recuerdo. */
   title: string;
-  /** Fecha del recuerdo, en el formato que prefieras mostrar (texto libre). */
-  date: string;
   /** Mensaje personal para este recuerdo. */
   message: string;
   /**
@@ -131,14 +129,13 @@ export const relationshipData = {
     continueLabel: "Continuar",
     /**
      * Los 7 recuerdos. NO se inventó ningún recuerdo real: reemplaza cada
-     * título, fecha, mensaje y fotografía con tu propia información.
+     * título, mensaje y fotografía con tu propia información.
      * Ver CONTENT_GUIDE.md, sección 6.
      */
     memories: [
       {
         id: 1,
         title: "[TÍTULO DEL RECUERDO 1]",
-        date: "[FECHA]",
         message: "[MENSAJE PERSONAL]",
         photo: "/memories/photo01.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 1]",
@@ -146,7 +143,6 @@ export const relationshipData = {
       {
         id: 2,
         title: "[TÍTULO DEL RECUERDO 2]",
-        date: "[FECHA]",
         message: "[MENSAJE PERSONAL]",
         photo: "/memories/photo02.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 2]",
@@ -154,7 +150,6 @@ export const relationshipData = {
       {
         id: 3,
         title: "[TÍTULO DEL RECUERDO 3]",
-        date: "[FECHA]",
         message: "Uno de mis días favoritos contigo.",
         photo: "/memories/photo03.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 3]",
@@ -162,7 +157,6 @@ export const relationshipData = {
       {
         id: 4,
         title: "[TÍTULO DEL RECUERDO 4]",
-        date: "[FECHA]",
         message: "[MENSAJE PERSONAL]",
         photo: "/memories/photo04.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 4]",
@@ -170,7 +164,6 @@ export const relationshipData = {
       {
         id: 5,
         title: "[TÍTULO DEL RECUERDO 5]",
-        date: "[FECHA]",
         message: "[MENSAJE PERSONAL]",
         photo: "/memories/photo05.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 5]",
@@ -178,7 +171,6 @@ export const relationshipData = {
       {
         id: 6,
         title: "[TÍTULO DEL RECUERDO 6]",
-        date: "[FECHA]",
         message: "[MENSAJE PERSONAL]",
         photo: "/memories/photo06.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 6]",
@@ -186,7 +178,6 @@ export const relationshipData = {
       {
         id: 7,
         title: "[TÍTULO DEL RECUERDO 7]",
-        date: "[FECHA]",
         message: "[MENSAJE PERSONAL]",
         photo: "/memories/photo07.jpg",
         photoAlt: "[DESCRIPCIÓN DE LA FOTOGRAFÍA 7]",

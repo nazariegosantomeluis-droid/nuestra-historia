@@ -160,7 +160,6 @@ export function KittyHunt({ onContinue }: KittyHuntProps) {
               <h3 id="memory-title" className="memory-title">
                 {activeMemory.title}
               </h3>
-              <p className="memory-date">{activeMemory.date}</p>
               {activeMemory.photo && (
                 <div className="memory-photo-frame">
                   <img
