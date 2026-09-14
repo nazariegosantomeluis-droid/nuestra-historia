@@ -38,8 +38,7 @@ nuestra-historia/
 │   └── main.tsx
 ├── public/
 │   ├── kitty/              # Coloca aquí tus 7 imágenes de Hello Kitty
-│   ├── memories/           # Coloca aquí las fotografías de la relación
-│   └── audio/               # Coloca aquí una canción opcional (music.mp3)
+│   └── memories/           # Coloca aquí las fotografías de la relación
 ├── .github/workflows/deploy.yml   # Publicación automática en GitHub Pages
 ├── CONTENT_GUIDE.md        # Guía paso a paso de personalización
 └── README.md
@@ -79,7 +78,7 @@ npm run preview
 ## Personalización
 
 Toda la guía detallada (cómo cambiar nombres, fechas, textos, fotografías,
-las 7 Hello Kitty, la carta, la música y los colores) está en
+las 7 Hello Kitty, la carta y los colores) está en
 **[CONTENT_GUIDE.md](./CONTENT_GUIDE.md)**.
 
 ## Conectar este proyecto a un repositorio de GitHub

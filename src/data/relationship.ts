@@ -230,15 +230,6 @@ export const relationshipData = {
     obviouslyYesLabel: "Obviamente sí ♡",
     finalLine: "Te elegiría otra vez.",
   },
-
-  /** ------------------------------------------------------------------ *
-   *  MÚSICA (opcional)
-   * ------------------------------------------------------------------ */
-  music: {
-    /** Coloca tu archivo en public/audio/music.mp3. No se reproduce sola. */
-    src: "/audio/music.mp3",
-    label: "Música",
-  },
 };
 
 export type RelationshipData = typeof relationshipData;

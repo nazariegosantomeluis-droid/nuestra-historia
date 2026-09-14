@@ -7,7 +7,6 @@ import { LoveLetter } from "./components/LoveLetter";
 import { FinalScreen } from "./components/FinalScreen";
 import { Navigation, type ScreenId } from "./components/Navigation";
 import { RelationshipCounter } from "./components/RelationshipCounter";
-import { MusicToggle } from "./components/MusicToggle";
 
 const ORDER: ScreenId[] = ["intro", "level1", "level2", "level3", "closing"];
 
@@ -38,8 +37,6 @@ export default function App() {
         {screen === "level3" && <LoveLetter key="level3" onContinue={goNext} />}
         {screen === "closing" && <FinalScreen key="closing" />}
       </AnimatePresence>
-
-      <MusicToggle />
     </>
   );
 }

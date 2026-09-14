@@ -285,34 +285,7 @@ paragraphs: [
 
 ---
 
-## 10. Cómo cambiar la música
-
-1. Coloca tu archivo de audio en `public/audio/music.mp3` (ese nombre
-   exacto, o cambia la ruta en el archivo de contenido si prefieres otro).
-2. **Variable a modificar** (solo si usas otro nombre de archivo):
-   `src/data/relationship.ts` → `music.src`
-
-   Antes:
-   ```ts
-   music: {
-     src: "/audio/music.mp3",
-     label: "Música",
-   },
-   ```
-   Después:
-   ```ts
-   music: {
-     src: "/audio/nuestra-cancion.mp3",
-     label: "Música",
-   },
-   ```
-3. La música **nunca se reproduce automáticamente**. Aparece un botón
-   discreto (círculo) en la esquina inferior derecha para activarla o
-   pausarla. Si no colocas ningún archivo, el botón desaparece solo.
-
----
-
-## 11. Cómo cambiar los colores
+## 10. Cómo cambiar los colores
 
 **Archivo:** `src/styles/global.css`
 **Sección:** bloque `:root { ... }`, al inicio del archivo.
@@ -340,7 +313,7 @@ estética.
 
 ---
 
-## 12. Cómo agregar más fotografías
+## 11. Cómo agregar más fotografías
 
 Si quieres usar más fotos de las que ya vienen configuradas (por ejemplo,
 dentro de un recuerdo, aunque el sistema solo admite una foto principal por
@@ -355,7 +328,7 @@ recuerdo):
 
 ---
 
-## 13. Cómo ejecutar localmente
+## 12. Cómo ejecutar localmente
 
 ```bash
 npm install
@@ -368,7 +341,7 @@ o en cualquier archivo se reflejan al instante.
 
 ---
 
-## 14. Cómo hacer build (construir para producción)
+## 13. Cómo hacer build (construir para producción)
 
 ```bash
 npm run build
@@ -379,7 +352,7 @@ para subir a cualquier hosting estático (incluido GitHub Pages).
 
 ---
 
-## 15. Cómo subir cambios a GitHub
+## 14. Cómo subir cambios a GitHub
 
 ```bash
 git add .
@@ -393,9 +366,9 @@ la sección "Conectar este proyecto a un repositorio de GitHub" en el
 
 ---
 
-## 16. Cómo publicar con GitHub Pages
+## 15. Cómo publicar con GitHub Pages
 
-1. Sube el proyecto a GitHub (ver sección 15 y el `README.md`).
+1. Sube el proyecto a GitHub (ver sección 14 y el `README.md`).
 2. En GitHub, entra al repositorio → **Settings → Pages**.
 3. En **Build and deployment → Source**, elige **GitHub Actions**.
 4. Haz push a la rama `main` (o ve a la pestaña **Actions** del repositorio
