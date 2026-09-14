@@ -49,7 +49,7 @@ export const relationshipData = {
     /** El nombre de tu pareja. Aparece en la carta y en el expediente médico. */
     partnerName: "Laly",
     /** Tu nombre. Aparece como firma de la carta. */
-    myName: "[TU NOMBRE]",
+    myName: "Luisito",
   },
 
   /**
