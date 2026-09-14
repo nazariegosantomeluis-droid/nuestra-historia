@@ -1,0 +1,156 @@
+.letter-screen {
+  gap: 1.2rem;
+  padding-top: clamp(3.5rem, 8vw, 4.5rem);
+}
+
+.letter-level-title {
+  font-style: italic;
+  max-width: 26ch;
+}
+
+.letter-stage {
+  position: relative;
+  z-index: 1;
+  width: min(520px, 100%);
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.envelope {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.envelope-body {
+  position: relative;
+  width: min(280px, 78vw);
+  aspect-ratio: 3 / 2;
+  background: linear-gradient(160deg, var(--color-blush), var(--color-pink-pastel));
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevated);
+  overflow: hidden;
+}
+
+.envelope-body::before,
+.envelope-body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 52%;
+  height: 62%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.envelope-body::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.envelope-body::after {
+  right: 0;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58%;
+  background: linear-gradient(160deg, var(--color-pink-deep), var(--color-purple));
+  clip-path: polygon(0 0, 100% 0, 50% 92%);
+  transform-origin: top center;
+  transition: transform 0.6s ease;
+  box-shadow: 0 6px 14px -6px rgba(81, 58, 115, 0.4);
+}
+
+.envelope-seal {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-pink-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.envelope:hover .envelope-seal {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.envelope-caption {
+  font-family: var(--font-script);
+  font-style: italic;
+  color: var(--color-purple);
+  font-size: 1.1rem;
+}
+
+.letter-paper {
+  width: 100%;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: clamp(1.6rem, 5vw, 2.6rem);
+  box-shadow: var(--shadow-elevated);
+  text-align: left;
+  transform-style: preserve-3d;
+}
+
+.letter-greeting {
+  font-family: var(--font-script);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--color-purple);
+  margin-bottom: 1rem;
+}
+
+.letter-paragraph {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  min-height: 1.6em;
+}
+
+.letter-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--color-pink-deep);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: caret-blink 0.85s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.letter-signature {
+  margin-top: 1.4rem;
+  font-family: var(--font-script);
+  font-style: italic;
+  color: var(--color-ink-soft);
+  text-align: right;
+}
+
+.letter-signature-name {
+  font-size: 1.3rem;
+  color: var(--color-pink-deep);
+}

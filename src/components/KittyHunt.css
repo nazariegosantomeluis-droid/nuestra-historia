@@ -1,0 +1,308 @@
+.kitty-screen {
+  gap: 1rem;
+  padding-top: clamp(3.5rem, 8vw, 4.5rem);
+}
+
+.kitty-subtitle {
+  max-width: 40ch;
+}
+
+.kitty-progress {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-card-border);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.kitty-progress-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+}
+
+.kitty-progress-count {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-purple-deep);
+}
+
+.kitty-scene {
+  position: relative;
+  z-index: 1;
+  width: min(920px, 100%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: clamp(0.9rem, 2.4vw, 1.5rem);
+  margin: 1.4rem 0;
+}
+
+.kitty-tile {
+  position: relative;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  padding: 0;
+  overflow: hidden;
+  transform: rotate(var(--tilt, 0deg));
+  box-shadow: 0 14px 30px -18px rgba(81, 58, 115, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kitty-tile:hover,
+.kitty-tile:focus-visible {
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 0 20px 38px -16px rgba(81, 58, 115, 0.55);
+}
+
+.kitty-tile:focus-visible {
+  outline: 3px solid var(--color-purple);
+  outline-offset: 3px;
+}
+
+.kitty-tile-art {
+  position: absolute;
+  inset: 0;
+}
+
+/* Themed decorative backgrounds — pure CSS, no external assets */
+.kitty-tile--frame .kitty-tile-art {
+  background: var(--color-white);
+  border: 10px solid var(--color-white);
+  outline: 1px solid rgba(125, 90, 166, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(125, 90, 166, 0.1);
+  background-image: linear-gradient(160deg, var(--color-blush), var(--color-lavender-soft));
+}
+
+.kitty-tile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kitty-tile--frame .kitty-tile-kitty {
+  inset: auto 6% 6% auto;
+  width: 34%;
+  height: 34%;
+}
+
+.kitty-tile--note .kitty-tile-art {
+  background: #fdf7ee;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 13px,
+    rgba(125, 90, 166, 0.16) 14px
+  );
+}
+
+.kitty-tile--chess .kitty-tile-art {
+  background-image: linear-gradient(45deg, var(--color-purple-deep) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-purple-deep) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-purple-deep) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-purple-deep) 75%);
+  background-size: 26px 26px;
+  background-position: 0 0, 0 13px, 13px -13px, -13px 0px;
+  background-color: var(--color-lavender-soft);
+}
+
+.kitty-tile--bouquet .kitty-tile-art {
+  background: radial-gradient(circle at 30% 30%, var(--color-pink-pastel) 0 22%, transparent 23%),
+    radial-gradient(circle at 65% 25%, var(--color-lavender) 0 20%, transparent 21%),
+    radial-gradient(circle at 45% 55%, var(--color-pink-deep) 0 18%, transparent 19%),
+    radial-gradient(circle at 70% 60%, var(--color-pink-pastel) 0 16%, transparent 17%),
+    var(--color-blush);
+}
+
+.kitty-tile--butterfly .kitty-tile-art {
+  background: linear-gradient(150deg, var(--color-lavender-soft), var(--color-blush));
+}
+
+.kitty-tile--moon .kitty-tile-art {
+  background: radial-gradient(circle at 70% 30%, #4a3a68 0 40%, #6b5690 100%);
+  box-shadow: inset -18px 14px 0 8px rgba(255, 252, 251, 0.85);
+  border-radius: 50%;
+  inset: 6%;
+}
+
+.kitty-tile--ribbon .kitty-tile-art {
+  background: repeating-linear-gradient(
+    100deg,
+    var(--color-pink-deep) 0 14px,
+    var(--color-pink-pastel) 14px 28px
+  );
+}
+
+.kitty-tile-kitty {
+  position: absolute;
+  inset: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.42;
+  filter: grayscale(0.5) saturate(0.7);
+  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.4s ease;
+}
+
+.kitty-tile-kitty.is-visible {
+  opacity: 1;
+  filter: none;
+}
+
+.kitty-tile.is-celebrating .kitty-tile-kitty {
+  animation: kitty-pop 0.7s ease;
+}
+
+@keyframes kitty-pop {
+  0% {
+    transform: scale(0.9);
+  }
+  45% {
+    transform: scale(1.22) rotate(-4deg);
+  }
+  70% {
+    transform: scale(0.96) rotate(2deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.kitty-tile-img,
+.kitty-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kitty-tile-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-purple-deep);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(81, 58, 115, 0.4);
+}
+
+.kitty-complete {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-card-border);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.8rem;
+  box-shadow: var(--shadow-soft);
+  max-width: 480px;
+}
+
+/* Memory modal */
+.memory-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(55, 42, 68, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  z-index: 60;
+}
+
+.memory-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.4rem, 4vw, 2.2rem);
+  max-width: 420px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-elevated);
+  text-align: center;
+}
+
+.memory-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.memory-close:hover {
+  color: var(--color-pink-deep);
+}
+
+.memory-number {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-pink-deep);
+  margin-bottom: 0.3rem;
+}
+
+.memory-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.memory-date {
+  font-family: var(--font-script);
+  font-style: italic;
+  color: var(--color-ink-soft);
+  margin-bottom: 1rem;
+}
+
+.memory-photo-frame {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid var(--surface-card-border);
+}
+
+.memory-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.memory-message {
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+@media (max-width: 420px) {
+  .kitty-scene {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

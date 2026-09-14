@@ -1,0 +1,29 @@
+.chess-motif {
+  position: absolute;
+  width: clamp(70px, 14vw, 120px);
+  height: clamp(70px, 14vw, 120px);
+  color: var(--color-purple);
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.chess-motif--top-left {
+  top: clamp(0.5rem, 3vw, 2rem);
+  left: clamp(0.5rem, 3vw, 2rem);
+}
+
+.chess-motif--top-right {
+  top: clamp(0.5rem, 3vw, 2rem);
+  right: clamp(0.5rem, 3vw, 2rem);
+}
+
+.chess-motif--bottom-left {
+  bottom: clamp(0.5rem, 3vw, 2rem);
+  left: clamp(0.5rem, 3vw, 2rem);
+}
+
+.chess-motif--bottom-right {
+  bottom: clamp(0.5rem, 3vw, 2rem);
+  right: clamp(0.5rem, 3vw, 2rem);
+}

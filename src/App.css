@@ -1,0 +1,13 @@
+.persistent-counter {
+  position: fixed;
+  top: clamp(3.2rem, 8vw, 3.8rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+@media (max-width: 640px) {
+  .persistent-counter {
+    top: clamp(3rem, 10vw, 3.6rem);
+  }
+}

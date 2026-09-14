@@ -1,0 +1,92 @@
+.closing-screen {
+  text-align: center;
+}
+
+.closing-sequence,
+.closing-finale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  max-width: 560px;
+}
+
+.checkmate {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-purple-deep);
+  letter-spacing: 0.06em;
+}
+
+.closing-line {
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  color: var(--color-ink);
+  max-width: 34ch;
+}
+
+.closing-line--script {
+  font-family: var(--font-script);
+  font-style: italic;
+  color: var(--color-pink-deep);
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+}
+
+.closing-duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.closing-duration-label {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-purple-deep);
+}
+
+.closing-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.closing-question-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--color-ink);
+}
+
+.closing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.closing-finale {
+  position: relative;
+  min-height: 160px;
+  justify-content: center;
+}
+
+.closing-finale-text {
+  font-family: var(--font-script);
+  font-style: italic;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  color: var(--color-purple-deep);
+}
+
+.closing-butterfly {
+  position: relative;
+}
