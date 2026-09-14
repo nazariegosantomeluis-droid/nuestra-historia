@@ -34,7 +34,7 @@ export function KittyHunt({ onContinue }: KittyHuntProps) {
       kittyHunt.memories.map((memory, index) => ({
         memory,
         theme: THEMES[index % THEMES.length],
-        image: kittyHunt.kittyImages[index],
+        image: kittyHunt.kittyImage,
       })),
     [kittyHunt]
   );

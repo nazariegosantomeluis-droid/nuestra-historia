@@ -210,29 +210,24 @@ Si un recuerdo no tiene fotografía, deja `photo: null,`.
 
 ---
 
-## 8. Cómo cambiar las 7 Hello Kitty
+## 8. Cómo cambiar la imagen de Hello Kitty
 
-1. **Dónde colocar cada imagen:** dentro de la carpeta `public/kitty/`.
-2. **Cómo nombrarlas:** `kitty01.png`, `kitty02.png`, ... hasta
-   `kitty07.png` (estos son los nombres que el proyecto ya busca).
-3. **Cómo cambiarlas:** si prefieres otros nombres de archivo, edita el
-   arreglo `kittyHunt.kittyImages` en `src/data/relationship.ts`:
+El Nivel 2 usa **una sola** imagen de Hello Kitty, repetida en las 7
+tarjetas (en vez de 7 imágenes distintas).
+
+1. **Dónde colocarla:** dentro de la carpeta `public/kitty/`.
+2. **Cómo nombrarla:** `kitty.png` (este es el nombre que el proyecto ya
+   busca).
+3. **Cómo cambiarla:** si prefieres otro nombre de archivo, edita
+   `kittyHunt.kittyImage` en `src/data/relationship.ts`:
 
    Antes:
    ```ts
-   kittyImages: [
-     "/kitty/kitty01.png",
-     "/kitty/kitty02.png",
-     // ...
-   ],
+   kittyImage: "/kitty/kitty.png",
    ```
    Después:
    ```ts
-   kittyImages: [
-     "/kitty/mi-kitty-favorita.png",
-     "/kitty/kitty02.png",
-     // ...
-   ],
+   kittyImage: "/kitty/mi-kitty-favorita.png",
    ```
 4. **Formatos permitidos:** PNG, JPG o WebP.
 5. **Si la imagen tiene fondo/transparencia:**

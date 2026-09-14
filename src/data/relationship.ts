@@ -184,19 +184,11 @@ export const relationshipData = {
       },
     ] as KittyMemory[],
     /**
-     * Rutas de las 7 imágenes de Hello Kitty. Coloca tus archivos en
-     * `public/kitty/` con estos nombres exactos (o cambia la ruta aquí si
-     * prefieres otros nombres). Acepta PNG, JPG o WebP.
+     * Imagen de Hello Kitty. Coloca un solo archivo en `public/kitty/kitty.png`
+     * (o cambia la ruta aquí si prefieres otro nombre/extensión). Acepta
+     * PNG, JPG o WebP. La misma imagen se reutiliza en las 7 tarjetas.
      */
-    kittyImages: [
-      "/kitty/kitty01.png",
-      "/kitty/kitty02.png",
-      "/kitty/kitty03.png",
-      "/kitty/kitty04.png",
-      "/kitty/kitty05.png",
-      "/kitty/kitty06.png",
-      "/kitty/kitty07.png",
-    ],
+    kittyImage: "/kitty/kitty.png",
   },
 
   /** ------------------------------------------------------------------ *

@@ -37,7 +37,7 @@ nuestra-historia/
 │   ├── App.tsx            # Orquesta las 5 pantallas
 │   └── main.tsx
 ├── public/
-│   ├── kitty/              # Coloca aquí tus 7 imágenes de Hello Kitty
+│   ├── kitty/              # Coloca aquí tu imagen de Hello Kitty (kitty.png)
 │   └── memories/           # Coloca aquí las fotografías de la relación
 ├── .github/workflows/deploy.yml   # Publicación automática en GitHub Pages
 ├── CONTENT_GUIDE.md        # Guía paso a paso de personalización

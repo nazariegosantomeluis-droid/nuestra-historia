@@ -11,7 +11,7 @@ interface IntroScreenProps {
 }
 
 export function IntroScreen({ onStart }: IntroScreenProps) {
-  const { intro } = relationshipData;
+  const { intro, kittyHunt } = relationshipData;
 
   return (
     <motion.section
@@ -33,7 +33,7 @@ export function IntroScreen({ onStart }: IntroScreenProps) {
         transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
       >
         <span className="intro-kitty-mark" aria-hidden="true">
-          <KittyImage src="/kitty/kitty01.png" alt="" className="intro-kitty-img" />
+          <KittyImage src={kittyHunt.kittyImage} alt="" className="intro-kitty-img" />
         </span>
 
         <p className="eyebrow">{intro.eyebrow}</p>
