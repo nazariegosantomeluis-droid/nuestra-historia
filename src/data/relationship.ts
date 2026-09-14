@@ -220,7 +220,7 @@ export const relationshipData = {
     question: "¿Jugamos otra partida?",
     yesLabel: "Sí ♡",
     obviouslyYesLabel: "Obviamente sí ♡",
-    finalLine: "Te elegiría otra vez.",
+    finalLine: "Te elegiría una y mil veces mas sin pensarlo ni un segundo.",
   },
 };
 
